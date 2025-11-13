@@ -20,11 +20,14 @@
  53/tcp          DNS                      Domain resolution                 Zone transfer, DNS spoofing, amplification DDoS 
  135/tcp         MSRPC                    Remote Procedure Call             Remote code execution (e.g., MS08-067) 
  139/tcp         NetBIOS-SSN              File/printer sharing              Credential theft, lateral movement 
- 45/tcp         Microsoft-DS (SMB)        File sharing                      WannaCry, EternalBlue, PrintNightmare
+ 445/tcp         Microsoft-DS (SMB)        File sharing                      WannaCry, EternalBlue, PrintNightmare
  2869/tcp       ICSLAP (UPnP)             Device discovery                  SSDP reflection DDoS attacks
- 5357/tcp        WSDAPI                   Web Services on Devices           Printer/service enumeration 
+ 5357/tcp        WSDAPI                   Web Services on Devices           Printer/service enumeration
+ -2 hosts up
+ -6 open ports: 53 (DNS), 135/139/445 (SMB/RPC), 2869 (UPnP), 5357 (WSD)
+ -High risk: SMB (445)
 
-Critical Note: SMB (445) + RPC (135) = High-risk combo on Windows → Common in ransomware attacks.
+-Critical Note: SMB (445) + RPC (135) = High-risk combo on Windows → Common in ransomware attacks.
 
 
 ## Final Notes
